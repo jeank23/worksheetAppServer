@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
+import Dashboard from './Dashboard';
 
 const Landing = () => <div>Landing</div>;
-const Dashboard = () => <h3>Dashboard</h3>;
 
 class App extends Component {
 
@@ -16,7 +16,7 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <BrowserRouter>
                     <div>
                         <Header />
