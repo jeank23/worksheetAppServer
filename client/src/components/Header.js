@@ -21,9 +21,7 @@ class Header extends Component {
                 <div className="nav-wrapper">
                 <Link to={ this.props.auth ? '/dashboard' : '/'} className="left brand-logo">WorkSheetApp</Link>
                 <ul id="nav-mobile" className="right">
-                    <li>
-                        {this.renderContent()}
-                    </li>
+                    {this.renderContent()}
                 </ul>
                 </div>
             </nav>
