@@ -1,42 +1,46 @@
 import React, { Component } from 'react';
 import ReactDataGrid from 'react-data-grid';
+import './Grid.css';
 
 
 const columns = () => {
-    let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let alphabet = '-ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let cols = [];
 
     [...alphabet].forEach((letter, index) => {
         cols[index] = {key: letter.toLowerCase(), name: letter};
+        if(index === 0){
+            cols[index].width = 50; 
+        }
     });
 
     return cols;
 };
 
-
 const rows = () => {
     let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let rows = [];
     for(let i=0; i < 1000; i++){
-        rows[i] = {id: i};
+        rows[i] = {id: i, '-': i}; 
     }
 
     return rows;
 };
-// const rows = [
-//     {id: 0, title: 'row1', count: 20}, 
-//     {id: 1, title: 'row2', count: 40}, 
-//     {id: 2, title: 'row3', count: 60}
-// ];
 
 class Grid extends Component {
     render(){
         console.log(columns());
         return (
-            <ReactDataGrid
-            columns={columns()}
-            rowGetter={i => rows()[i]}
-            rowsCount={100} />
+            <div>
+                <ReactDataGrid  
+                columns={columns()} 
+                rowGetter={i => rows()[i]} 
+                rowsCount={1000} 
+                headerRowHeight={30}
+                rowHeight={20}
+                minHeight={window.visualViewport.height - 56}
+                  />
+            </div>
         );
     }
 }
