@@ -1,3 +1,6 @@
+#Run the app locally
+ - npm run dev
+
 #link to deployed app
 https://boiling-ridge-47765.herokuapp.com/
 
