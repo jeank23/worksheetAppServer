@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
 const keys = require('./config/keys');
 require('./models/User');
+require('./models/Grid');
 require('./services/passport');
 
 
@@ -27,6 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
+require('./routes/gridRoutes')(app);
 
 if (process.env.NODE_ENV == 'production') {
     //express will serve up production assets

@@ -5,6 +5,7 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Grid from './Grid';
+import { get } from 'https';
 
 const Landing = () => <div>Landing</div>;
 
@@ -16,7 +17,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
                 <BrowserRouter>
                     <div>
                         <Header />

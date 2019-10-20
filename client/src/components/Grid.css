@@ -1,0 +1,11 @@
+.react-grid-Grid { 
+    min-height: calc(100vh - 56px) !important; 
+}
+
+.react-grid-HeaderCell {
+    text-align: center !important;
+}
+
+.react-grid-Row {
+    text-align: center !important;
+}
