@@ -5,3 +5,7 @@
 .react-grid-HeaderCell {
     text-align: center !important;
 }
+
+.react-grid-Row {
+    text-align: center !important;
+}

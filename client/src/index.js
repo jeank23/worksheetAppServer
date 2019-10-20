@@ -7,7 +7,10 @@ import 'materialize-css/dist/css/materialize.min.css';
 
 import App from './components/App';
 import reducers from './reducers';
-
+//temporary code just to test backend routes
+import axios from 'axios';
+window.axios = axios;
+//------------------------------------------
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
